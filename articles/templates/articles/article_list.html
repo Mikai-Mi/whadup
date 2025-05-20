@@ -1,0 +1,26 @@
+{% load static from static%} <!--pozwala na korzystanie z plikow statycznych bez dokladnego adresu pliku -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articlelist</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+</head>
+<body>
+    <div class="container">
+    <h1>Article List</h1>
+    <div class="articles">
+        {% for article in articles %} <!-- petla po artykulach -->
+            <div class="article">
+                <h2><a href="#">{{ article.title }}</a></h2> <!--outputujemy tytul artykulu -->
+                <p>{{article.snippet}}</p>
+                <p>{{article.date}}</p>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+</body>
+</html>
+
