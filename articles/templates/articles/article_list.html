@@ -1,16 +1,15 @@
-{% load static from static%} <!--pozwala na korzystanie z plikow statycznych bez dokladnego adresu pliku -->
+{% extends 'base_layout.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articlelist</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
-</head>
-<body>
-    <div class="container">
-    <h1>Article List</h1>
+<nav><li>
+    <ol>Main Page</ol>
+    <ol>Write a message</ol>
+    <ol>About</ol>
+</li></nav>
+<div class="container">
+    <div class="text">
+        <h1>WHADUP</h1>
+        <p>Post something !</p>
+    </div>
     <div class="articles">
         {% for article in articles %} <!-- petla po artykulach -->
             <div class="article">
@@ -20,7 +19,5 @@
             </div>
         {% endfor %}
     </div>
-    </div>
-</body>
-</html>
+</div>
 

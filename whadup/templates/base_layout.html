@@ -1,0 +1,17 @@
+{% load static from static%} <!--pozwala na korzystanie z plikow statycznych bez dokladnego adresu pliku -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WHADUP</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+</head>
+<body>
+    <div class="wrapper">
+        {%block content %}
+        {% endblock %} 
+    </div>
+</body>
+</html>
+

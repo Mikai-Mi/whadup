@@ -8,8 +8,18 @@ body {
     background-color: #8fc4f8
 }
 
+div.text {
+    text-align: center;
+}
+
+div.text p{
+    margin-top: 2vh;
+    font-size: 30pt;
+}
+
 h1 {
     color: white;
+    font-size: 50pt;
 }
 
 div.container {
@@ -30,6 +40,11 @@ div.articles {
     padding: 5vw;
     overflow-y: auto;
 }
+
+::-webkit-scrollbar{
+    display: none;
+}
+
 
 div.article{
     width: fit-content;
