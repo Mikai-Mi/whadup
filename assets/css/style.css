@@ -41,6 +41,11 @@ div.articles {
     overflow-y: auto;
 }
 
+div.article:hover {
+    scale: 1.1;
+    transition: 0.2s;
+}
+
 ::-webkit-scrollbar{
     display: none;
 }
@@ -52,6 +57,7 @@ div.article{
     display: flex;
     flex-direction: column;
     padding: 2.5vw;
+    transition: 0.4s;
     margin-bottom: 5vh;
     border-radius: 30px;
     background: linear-gradient(145deg, #99d2ff, #81b0df);
