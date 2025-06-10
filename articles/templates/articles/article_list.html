@@ -1,11 +1,14 @@
 {% extends 'base_layout.html' %}
 
-<nav><li>
-    <ol>Main Page</ol>
-    <ol>Write a message</ol>
-    <ol>About</ol>
-</li></nav>
+{% block content %}
 <div class="container">
+<nav class="listNav">
+    <ul>
+        <li>Main Page</li>
+        <li>Write a message</li>
+        <li>About</li>
+    </ul>
+</nav>
     <div class="text">
         <h1>WHADUP</h1>
         <p>Post something !</p>
@@ -13,11 +16,12 @@
     <div class="articles">
         {% for article in articles %} <!-- petla po artykulach -->
             <div class="article">
-                <h2><a href="#">{{ article.title }}</a></h2> <!--outputujemy tytul artykulu -->
+                <h2><a href="{% url 'articles:article_detail' slug=article.slug %}">{{ article.title }}</a></h2> <!--outputujemy tytul artykulu -->
                 <p>{{article.snippet}}</p>
                 <p>{{article.date}}</p>
             </div>
         {% endfor %}
     </div>
 </div>
+{% endblock %}
 

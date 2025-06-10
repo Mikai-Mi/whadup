@@ -5,7 +5,8 @@ class Article(models.Model):
     slug = models.SlugField()
     body = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    
+    thumbnail = models.ImageField(upload_to='thumbnails/', blank=True, null=True)
+
     def __str__(self):
         return self.title
     

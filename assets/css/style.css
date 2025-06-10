@@ -10,6 +10,10 @@ body {
 
 div.text {
     text-align: center;
+    flex: 30%;
+    align-self: center;
+    text-align: center;
+    margin-left: auto;
 }
 
 div.text p{
@@ -27,10 +31,6 @@ div.container {
     height: 100vh;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    /* padding-left: 5vw;
-    padding-right: 5vw; */
 }
 
 div.articles {
@@ -57,4 +57,14 @@ div.article{
     background: linear-gradient(145deg, #99d2ff, #81b0df);
     box-shadow:  12px 12px 24px #668bb0,
              -12px -12px 24px #b8fdff;
+}
+
+nav.listNav {
+    width: 20vw;
+    height: 100vh;
+    background-color: #0d6bd5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
